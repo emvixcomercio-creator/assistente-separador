@@ -1,0 +1,203 @@
+<title>Privacidade do Assistente do Separador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  :root {
+    --bg: #F4F3F1;
+    --surface: #FFFFFF;
+    --ink: #1D1B1C;
+    --muted: #67616A;
+    --accent: #B3261E;
+    --accent-soft: #FBE9E7;
+    --border: #E2DEDA;
+    --ok: #1E7A45;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #151415;
+      --surface: #1E1C1E;
+      --ink: #EEEBE8;
+      --muted: #A9A3AB;
+      --accent: #F2786C;
+      --accent-soft: #3A1E1B;
+      --border: #34302F;
+      --ok: #6FCF97;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #151415;
+    --surface: #1E1C1E;
+    --ink: #EEEBE8;
+    --muted: #A9A3AB;
+    --accent: #F2786C;
+    --accent-soft: #3A1E1B;
+    --border: #34302F;
+    --ok: #6FCF97;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    padding-inline: 16px;
+    padding-block: 48px 64px;
+  }
+  .page { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; }
+  header { display: flex; flex-direction: column; gap: 8px; }
+  .kicker {
+    font: 500 12px/1 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+  }
+  h1 { font-size: clamp(28px, 5vw, 38px); line-height: 1.12; font-weight: 800; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+  .updated { color: var(--muted); font-size: 14px; margin: 0; }
+  .lead { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; margin: 0; }
+  section { display: flex; flex-direction: column; gap: 12px; }
+  h2 { font-size: 20px; line-height: 1.3; margin: 0; font-weight: 700; text-wrap: balance; }
+  p { margin: 0; }
+  .perms { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
+  .perm { display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr); gap: 6px 20px; padding-block: 14px; border-bottom: 1px solid var(--border); }
+  .perm code {
+    font: 500 13px/1.5 'JetBrains Mono', ui-monospace, monospace;
+    color: var(--accent); overflow-wrap: anywhere;
+  }
+  @media (max-width: 560px) { .perm { grid-template-columns: minmax(0, 1fr); } }
+  ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .never li::marker { content: '✕  '; color: var(--accent); font-weight: 700; }
+  .kept { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .kept th, .kept td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .kept th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 700; }
+  .table-wrap { overflow-x: auto; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .mail {
+    font: 500 15px/1 'JetBrains Mono', ui-monospace, monospace;
+    background: var(--accent-soft); color: var(--ink); padding: 8px 10px; border-radius: 6px; user-select: all;
+  }
+  button {
+    font: 600 14px/1 'Figtree', system-ui, sans-serif; color: var(--ink); background: var(--surface);
+    border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; cursor: pointer;
+  }
+  button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); padding-top: 18px; }
+</style>
+
+<main class="page">
+  <header>
+    <span class="kicker">Extensão para Chrome</span>
+    <h1>Política de privacidade do Assistente do Separador</h1>
+    <p class="updated">Última atualização: 24 de setembro de 2026 · versão da extensão 0.9.0</p>
+  </header>
+
+  <p class="lead">
+    O Assistente do Separador ajuda lojas que usam o App Separador a acompanhar o Portfólio ideal, os produtos
+    desativados, os mais vendidos, os pedidos novos, o cancelamento da semana e o estoque dos produtos que a loja quiser
+    controlar. O trabalho é feito no navegador da própria loja. Para o estoque e as configurações serem os mesmos em
+    qualquer computador da loja, a extensão guarda uma cópia desses dados no servidor do Assistente, separada por loja.
+    Para usar, a loja cadastra um e-mail (7 dias grátis, depois assinatura). Nenhum dado de cliente vai para esse
+    servidor.
+  </p>
+
+  <section>
+    <h2>O que a extensão acessa e por quê</h2>
+    <div class="perms">
+      <div class="perm">
+        <code>separador.ifood.com.br</code>
+        <p>Lê as mesmas informações que as telas do App Separador já mostram para a loja, usando o login que a loja já
+        abriu no navegador: o catálogo (nome, código de barras, se o produto está ativado e se é do Portfólio ideal), a
+        lista de pedidos novos e a lista de pedidos finalizados (entregues e cancelados), com os produtos, as quantidades,
+        o motivo do cancelamento e os itens que ficaram indisponíveis. Mostra o painel
+        flutuante na própria página. A extensão só ativa ou desativa um produto quando a pessoa clica e confirma, e só
+        inicia a separação de um pedido ou desativa sozinho o que zerou se a loja ligar essas opções nas configurações.</p>
+      </div>
+      <div class="perm">
+        <code>assistente-separador.onrender.com</code>
+        <p>Servidor do Assistente. Recebe e devolve os dados da loja listados em "O que fica guardado", para que
+        qualquer computador da loja veja o mesmo estoque, as mesmas opções e o mesmo histórico. A loja é
+        identificada pelo código interno dela no Separador e pela chave da licença, que o servidor entrega ao
+        cadastrar o e-mail. O servidor não recebe o login nem a senha do iFood e não
+        fala com o iFood.</p>
+      </div>
+      <div class="perm">
+        <code>storage</code>
+        <p>Guarda no próprio Chrome uma cópia dos dados da loja, para funcionar mesmo sem internet. As mudanças feitas
+        sem internet são enviadas ao servidor quando a conexão volta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dados de clientes</h2>
+    <p>As respostas do App Separador sobre um pedido trazem dados do cliente (como nome e endereço), porque é assim que
+    as telas do Separador funcionam. A extensão usa desses pedidos só o número do pedido, os produtos e as quantidades.
+    Ela não mostra, não guarda e não envia nome, telefone, endereço ou documento de nenhum cliente.</p>
+  </section>
+
+  <section>
+    <h2>O que fica guardado (no navegador e no servidor)</h2>
+    <div class="table-wrap">
+      <table class="kept">
+        <thead><tr><th>O quê</th><th>Por quanto tempo</th></tr></thead>
+        <tbody>
+          <tr><td>E-mail da loja, informado no cadastro, e a situação da licença (teste, assinatura e vencimento). Usado só para liberar a extensão e para o contato sobre a assinatura; não é usado para propaganda</td><td>Enquanto a loja usar a extensão ou até pedir para apagar</td></tr>
+          <tr><td>Estoque dos produtos que a loja escolheu controlar (código de barras, nome e quantidade) e o registro de cada mudança (contagem, entrada, baixa com o número do pedido, devolução de pedido cancelado)</td><td>Até a loja parar de controlar o produto ou pedir para apagar</td></tr>
+          <tr><td>Opções da extensão (voz, intervalo de leitura, desativar sozinho)</td><td>Até a loja mudar</td></tr>
+          <tr><td>Histórico de produtos desativados e reativados (nome do produto e hora)</td><td>Os 300 registros mais recentes</td></tr>
+          <tr><td>Produtos e quantidades dos pedidos entregues, para o ranking dos mais vendidos</td><td>15 dias</td></tr>
+          <tr><td>Números dos pedidos novos já anunciados (para um pedido não ser anunciado ou baixado duas vezes)</td><td>2 dias</td></tr>
+          <tr><td>Produtos que a extensão desativou sozinha por estoque zerado (nome e código de barras), para reativar depois</td><td>Até voltar a ter estoque</td></tr>
+          <tr><td>Pedidos cancelados da semana (número curto do pedido, motivo e produto que faltou), só na memória da aba</td><td>Até fechar ou recarregar a aba</td></tr>
+          <tr><td>Lista dos produtos ativados na última leitura, para perceber o que mudou</td><td>Trocada a cada leitura</td></tr>
+          <tr><td>Resumo técnico para o suporte (formato das respostas do Separador, sem valores de clientes)</td><td>Até ser substituído pelo próximo</td></tr>
+          <tr><td>Tamanho e posição do painel, e o gravador de ações do diagnóstico: <b>só no computador, não vão ao servidor</b></td><td>Até remover a extensão</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Uma cópia fica no armazenamento local do Chrome, no computador da loja (remover a extensão apaga essa cópia). A
+    outra fica no servidor do Assistente, hospedado na Render (Estados Unidos), com conexão criptografada (https). Para
+    apagar os dados da loja do servidor, mande um e-mail para o endereço no fim desta página.</p>
+  </section>
+
+  <section>
+    <h2>O que a extensão não faz</h2>
+    <ul class="never">
+      <li>Não envia dados de clientes para lugar nenhum; ao servidor do Assistente vão só os dados da loja listados acima.</li>
+      <li>Não guarda a senha da loja e não leva o login para fora do App Separador.</li>
+      <li>Não usa rastreadores, análise de comportamento nem publicidade.</li>
+      <li>Não vende, aluga nem compartilha os dados da loja com ninguém.</li>
+      <li>Não lê outros sites nem outras abas do navegador.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Diagnóstico para suporte</h2>
+    <p>Quando o suporte pede, a pessoa da loja pode copiar para a área de transferência um resumo técnico de como as
+    telas do Separador estão respondendo, sem nome, telefone, endereço ou código de clientes. Nada é enviado
+    automaticamente: o texto só sai do computador se a própria loja colar e mandar para o suporte.</p>
+  </section>
+
+  <section>
+    <h2>Dúvidas sobre esta política</h2>
+    <div class="contact">
+      <span class="mail" id="mail">emvixcomercio@gmail.com</span>
+      <button type="button" id="copy">Copiar e-mail</button>
+    </div>
+    <p>Se a extensão mudar o que lê ou guarda, esta página é atualizada e a data no topo muda.</p>
+  </section>
+
+  <footer>
+    O Assistente do Separador é uma extensão independente, feita por Emvix Comércio de Bebidas. Não tem relação
+    oficial com o iFood.
+  </footer>
+</main>
+
+<script>
+  document.getElementById('copy').addEventListener('click', (e) => {
+    const btn = e.currentTarget;
+    const txt = document.getElementById('mail').textContent;
+    navigator.clipboard.writeText(txt).then(() => { btn.textContent = 'Copiado'; }, () => {
+      const r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selecionado: Ctrl+C';
+    });
+  });
+</script>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Como usar o Assistente do Separador</title>
+<meta name="description" content="Passo a passo para instalar e configurar o Assistente do Separador: cadastro, estoque, desativar sozinho, voz e início automático.">
+<link rel="icon" href="img/icone-128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="estilo.css">
+<style>
+  .guia { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 40px; padding: 40px 0 64px; align-items: start; }
+  .indice { position: sticky; top: 88px; display: grid; gap: 4px; font-size: 15px; }
+  .indice a { text-decoration: none; color: var(--muted); padding: 6px 10px; border-radius: 8px; }
+  .indice a:hover { background: var(--surface); color: var(--ink); }
+  .etapa { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 28px; scroll-margin-top: 84px; }
+  .etapa + .etapa { margin-top: 18px; }
+  .etapa h2 { font-size: 24px; display: flex; gap: 12px; align-items: center; margin-bottom: 14px; }
+  .etapa h2 .n { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--red); color: var(--red-ink); font-size: 17px; }
+  .etapa ol, .etapa ul { margin: 0 0 12px; padding-left: 22px; display: grid; gap: 8px; }
+  .etapa p { margin: 0 0 12px; }
+  .etapa .print { margin-top: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+  .dica { background: var(--soft); border-radius: 12px; padding: 14px 16px; font-size: 15.5px; margin: 12px 0 0; }
+  .dica b { color: var(--red); }
+  kbd { font: 600 13px/1 ui-monospace, monospace; background: var(--bg); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 3px 6px; }
+  .topo h1 { margin-bottom: 10px; }
+  @media (max-width: 860px) { .guia { grid-template-columns: minmax(0, 1fr); gap: 20px; } .indice { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); } .etapa { padding: 20px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="./"><img src="img/icone-128.png" alt="">Assistente do Separador</a>
+    <span class="sp"></span>
+    <a class="link" href="./">Início</a>
+    <a class="btn pri peq" href="#" data-instalar>Instalar grátis</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="topo" style="padding-top:40px">
+    <span class="tag">Passo a passo</span>
+    <h1>Como usar o Assistente do Separador</h1>
+    <p class="lead" style="margin:0">Da instalação ao estoque desativando sozinho. Leva uns 10 minutos, e a maior parte é cadastrar o estoque. <a href="index.html#video">Veja o vídeo de 1 minuto</a>.</p>
+  </div>
+
+  <div class="guia">
+    <nav class="indice">
+      <a href="#instalar">1. Instalar</a>
+      <a href="#cadastro">2. Cadastrar o e-mail</a>
+      <a href="#painel">3. Conhecer o painel</a>
+      <a href="#estoque">4. Montar o estoque</a>
+      <a href="#automatico">5. Desativar sozinho</a>
+      <a href="#pedidos">6. Pedido novo e voz</a>
+      <a href="#pcs">7. Outros computadores</a>
+      <a href="#dia">8. No dia a dia</a>
+      <a href="#assinatura">9. Assinatura</a>
+    </nav>
+
+    <div>
+      <section class="etapa" id="instalar">
+        <h2><span class="n">1</span>Instalar no Chrome</h2>
+        <ol>
+          <li>No computador onde a loja usa o App Separador, abra o Google Chrome.</li>
+          <li>Entre na <a href="#" data-instalar>página do Assistente na Chrome Web Store</a> e clique em <b>Usar no Chrome</b>, depois em <b>Adicionar extensão</b>.</li>
+          <li>Opcional: clique no ícone de quebra-cabeça, ao lado da barra de endereço, e fixe o Assistente para ver o ícone.</li>
+        </ol>
+        <p class="dica"><b>Importante:</b> funciona no Chrome do computador. No celular e no tablet a Chrome Web Store não instala extensões.</p>
+      </section>
+
+      <section class="etapa" id="cadastro">
+        <h2><span class="n">2</span>Cadastrar o e-mail</h2>
+        <ol>
+          <li>Abra o App Separador (<b>separador.ifood.com.br</b>) e entre com o login da loja, como sempre.</li>
+          <li>O painel do Assistente aparece no alto da tela pedindo o e-mail. Digite o e-mail da loja e clique em <b>Começar</b>.</li>
+          <li>Pronto: são 7 dias grátis, com tudo liberado.</li>
+        </ol>
+        <p class="dica"><b>Não apareceu o painel?</b> Aperte <kbd>F5</kbd> na aba do Separador. Se pedir para abrir uma tela, clique em <b>Pedidos</b> ou <b>Catálogo</b> no menu do Separador: é assim que o Assistente descobre qual é a loja.</p>
+      </section>
+
+      <section class="etapa" id="painel">
+        <h2><span class="n">3</span>Conhecer o painel</h2>
+        <ul>
+          <li><b>Arrastar:</b> segure a barra preta de cima e leve o painel para onde não atrapalhe.</li>
+          <li><b>Minimizar:</b> o botão <b>_</b> deixa só as duas porcentagens na tela.</li>
+          <li><b>Tamanho:</b> no <b>⚙</b>, em "Tamanho do painel", escolha de Pequeno a Muito grande.</li>
+          <li><b>Portfólio Ideal:</b> a porcentagem verde é a nota do iFood, já com a regra dos grupos. A aba mostra o que falta ativar, com botão <b>Ativar</b>.</li>
+          <li><b>Cancelamento da loja:</b> o cartão vermelho mostra só os cancelamentos por culpa da loja na semana, com a meta de 2%.</li>
+          <li><b>Desativados</b> e <b>Mais vendidos</b> se montam sozinhos. Para o ranking começar, abra uma vez <b>Expedição → Finalizados</b> no Separador.</li>
+        </ul>
+        <img class="print" src="img/screenshot-2-portfolio-ideal.png" width="1280" height="800" alt="Painel na aba Portfólio Ideal" loading="lazy">
+      </section>
+
+      <section class="etapa" id="estoque">
+        <h2><span class="n">4</span>Montar o estoque</h2>
+        <p>Cadastre só os produtos que quer controlar. Comece pelos do <b>Portfólio Ideal</b> e pelos que mais vendem. Tem dois jeitos:</p>
+        <p><b>Bipando, um por um</b></p>
+        <ol>
+          <li>Abra a aba <b>Estoque</b>.</li>
+          <li>Bipe o código de barras (ou digite o nome) e aperte <kbd>Enter</kbd>.</li>
+          <li>Digite a quantidade que tem na prateleira e aperte <kbd>Enter</kbd>. Pronto, próximo.</li>
+        </ol>
+        <p><b>Pela planilha do Excel, vários de uma vez</b></p>
+        <ol>
+          <li>Na aba Estoque, clique em <b>Baixar planilha</b>. Ela já vem com os produtos do catálogo.</li>
+          <li>Abra no Excel e preencha a coluna <b>Quantidade</b> só dos produtos que quer controlar. Deixe os outros em branco.</li>
+          <li>Salve e clique em <b>Importar planilha</b>. O painel mostra um resumo; confira e clique em <b>Importar</b>.</li>
+        </ol>
+        <p><b>Quando chegar mercadoria:</b> clique em <b>Mudar</b> no produto, escolha <b>Entrada (+ chegou)</b> e digite quanto chegou. Para corrigir o total, escolha <b>Contagem</b>.</p>
+        <img class="print" src="img/screenshot-1-estoque.png" width="1280" height="800" alt="Painel na aba Estoque" loading="lazy">
+      </section>
+
+      <section class="etapa" id="automatico">
+        <h2><span class="n">5</span>Ligar o "Desativar sozinho o que zerar"</h2>
+        <ol>
+          <li>Clique no <b>⚙</b> do painel.</li>
+          <li>Marque <b>Desativar sozinho o que zerar</b> e confirme.</li>
+        </ol>
+        <p>A partir daí:</p>
+        <ul>
+          <li>Cada pedido que entra dá baixa no estoque. Pedido cancelado devolve.</li>
+          <li>Chegou a zero: o produto é desativado no iFood e o painel avisa em voz alta.</li>
+          <li>Deu entrada: ele volta a ser ativado. O Assistente só reativa o que ele mesmo desativou.</li>
+        </ul>
+        <p class="dica"><b>Dica:</b> se um pedido for cancelado porque o produto faltou, o Assistente zera esse produto, porque a contagem estava errada. Confira a prateleira e faça uma nova contagem.</p>
+      </section>
+
+      <section class="etapa" id="pedidos">
+        <h2><span class="n">6</span>Pedido novo e voz</h2>
+        <ul>
+          <li>No <b>⚙</b>, "Avisar em voz alta quando entrar pedido novo" e "Falar também os itens" vêm ligados. Clique em <b>Testar som</b> e confira se a caixa de som está ligada.</li>
+          <li><b>Iniciar a separação sozinho</b> vem desligado. Ligado, o Assistente aperta "Iniciar Separação" assim que o pedido chega. Separar e bipar os itens continua com você.</li>
+          <li>Pedido pausado ou de teste nunca é iniciado sozinho.</li>
+        </ul>
+      </section>
+
+      <section class="etapa" id="pcs">
+        <h2><span class="n">7</span>Usar em outro computador da loja</h2>
+        <ol>
+          <li>Instale o Assistente no outro computador (passo 1).</li>
+          <li>No cadastro, use <b>o mesmo e-mail</b>.</li>
+        </ol>
+        <p>O estoque, as opções e o histórico aparecem iguais nos dois, e um pedido não é anunciado nem baixado duas vezes. Só o tamanho e a posição do painel são de cada computador.</p>
+      </section>
+
+      <section class="etapa" id="dia">
+        <h2><span class="n">8</span>No dia a dia</h2>
+        <ul>
+          <li>Deixe o Chrome aberto na aba do App Separador enquanto a loja estiver aberta. Pode ficar atrás de outras janelas.</li>
+          <li>Sem internet, o Assistente continua funcionando e envia as mudanças quando a conexão volta.</li>
+          <li>Se o painel sumir ou mostrar erro, aperte <kbd>F5</kbd> na aba do Separador.</li>
+          <li>Quando o Separador pedir login de novo, entre normalmente: o painel volta sozinho.</li>
+        </ul>
+      </section>
+
+      <section class="etapa" id="assinatura">
+        <h2><span class="n">9</span>Assinatura</h2>
+        <p>O rodapé do painel mostra quantos dias de teste faltam. Quando acabar, o painel mostra o valor, a chave PIX e um botão para mandar o comprovante no WhatsApp. Assim que o pagamento é confirmado, clique em <b>Já paguei: conferir</b> e tudo volta a funcionar, com o estoque e o histórico guardados.</p>
+        <p style="margin:0">Sem fidelidade: se não renovar, o painel só para de funcionar. <a href="#" data-zap>Dúvidas? Chame no WhatsApp</a>.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-nome>Emvix Comércio de Bebidas</span>
+    <span><a href="./">Início</a> · <a href="privacidade.html">Política de privacidade</a> · <a href="#" data-zap>WhatsApp</a></span>
+    <span>Sem relação oficial com o iFood.</span>
+  </div>
+</footer>
+
+<script>
+  const LOJA = 'https://chromewebstore.google.com/detail/kdofkaahabffamnfbegignnjaklldcpo';
+  document.querySelectorAll('[data-instalar]').forEach((a) => { a.href = LOJA; a.target = '_blank'; a.rel = 'noopener'; });
+  fetch('https://assistente-separador.onrender.com/v1/publico').then((r) => r.json()).then((c) => {
+    const d = String(c.whatsapp || '').replace(/\D/g, '');
+    const zap = d ? 'https://wa.me/' + (d.length <= 11 ? '55' + d : d) + '?text=' + encodeURIComponent('Olá! Tenho uma dúvida sobre o Assistente do Separador.') : '';
+    document.querySelectorAll('[data-zap]').forEach((a) => { if (zap) { a.href = zap; a.target = '_blank'; a.rel = 'noopener'; } else a.removeAttribute('href'); });
+    if (c.nome) document.querySelectorAll('[data-nome]').forEach((el) => { el.textContent = c.nome; });
+  }).catch(() => {});
+</script>
+</body>
+</html>
