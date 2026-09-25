@@ -22,7 +22,7 @@
     <a class="link" href="#preco">Preço</a>
     <a class="link" href="#duvidas">Dúvidas</a>
     <a class="link" href="como-usar.html">Como usar</a>
-    <a class="btn pri peq" href="#" data-instalar>Instalar grátis</a>
+    <a class="btn pri peq" href="https://chromewebstore.google.com/detail/assistente-do-separador/kdofkaahabffamnfbegignnjaklldcpo" target="_blank" rel="noopener">Instalar grátis</a>
   </div>
 </header>
 
@@ -33,10 +33,11 @@
       <h1>Seu catálogo do iFood em dia, sem ficar vigiando a tela.</h1>
       <p class="lead">Um painel dentro do App Separador que mostra o Portfólio Ideal ao vivo, desativa sozinho o produto que acabou no estoque e avisa em voz alta cada pedido novo.</p>
       <div class="acoes">
-        <a class="btn pri" href="#" data-instalar>Instalar no Chrome</a>
+        <a class="btn pri" href="https://chromewebstore.google.com/detail/assistente-do-separador/kdofkaahabffamnfbegignnjaklldcpo" target="_blank" rel="noopener">Instalar no Chrome</a>
         <a class="btn sec" href="#" data-zap>Falar no WhatsApp</a>
       </div>
       <p class="nota">7 dias grátis. Sem cartão e sem fidelidade.</p>
+      <a class="selo" href="https://chromewebstore.google.com/detail/assistente-do-separador/kdofkaahabffamnfbegignnjaklldcpo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fff"/><path d="M12 7a5 5 0 014.33 2.5H21A10 10 0 003.4 7l3.1 5.37A5 5 0 0112 7z" fill="#DB4437"/><path d="M7.67 14.5L3.4 7A10 10 0 0012 22l3.1-5.37A5 5 0 017.67 14.5z" fill="#0F9D58"/><path d="M16.33 9.5A5 5 0 0115.1 16.63L12 22A10 10 0 0021 9.5z" fill="#FFCD40"/><circle cx="12" cy="12" r="3.6" fill="#4285F4" stroke="#fff" stroke-width="1.2"/></svg><span><small>Disponível na</small>Chrome Web Store</span></a>
     </div>
     <img class="print" src="img/screenshot-1-estoque.png" width="1280" height="800" alt="Painel do Assistente aberto no App Separador, na aba Estoque">
   </div>
@@ -128,7 +129,7 @@
           <li>Aviso de pedido novo em voz alta</li>
           <li>Suporte pelo WhatsApp</li>
         </ul>
-        <div class="acoes" style="margin-top:22px"><a class="btn pri" href="#" data-instalar>Começar 7 dias grátis</a></div>
+        <div class="acoes" style="margin-top:22px"><a class="btn pri" href="https://chromewebstore.google.com/detail/assistente-do-separador/kdofkaahabffamnfbegignnjaklldcpo" target="_blank" rel="noopener">Começar 7 dias grátis</a></div>
       </div>
     </div>
   </section>
@@ -157,7 +158,7 @@
 
 <script>
   // Link da Chrome Web Store e contato vêm do servidor (o dono muda na página de controle).
-  const LOJA = 'https://chromewebstore.google.com/detail/kdofkaahabffamnfbegignnjaklldcpo';
+  const LOJA = 'https://chromewebstore.google.com/detail/assistente-do-separador/kdofkaahabffamnfbegignnjaklldcpo';
   document.querySelectorAll('[data-instalar]').forEach((a) => { a.href = LOJA; a.target = '_blank'; a.rel = 'noopener'; });
   fetch('https://assistente-separador.onrender.com/v1/publico').then((r) => r.json()).then((c) => {
     const d = String(c.whatsapp || '').replace(/\D/g, '');

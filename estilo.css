@@ -66,3 +66,8 @@
     .destaque { padding: 28px 22px; }
     .nav a.link { display: none; }
   }
+
+  .selo { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 8px 14px 8px 10px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); text-decoration: none; }
+  .selo svg { width: 30px; height: 30px; flex: none; }
+  .selo span { display: flex; flex-direction: column; line-height: 1.15; font-weight: 700; font-size: 15px; }
+  .selo small { font-weight: 500; font-size: 12px; color: var(--muted); }

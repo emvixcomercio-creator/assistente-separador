@@ -34,7 +34,7 @@
     <a class="marca" href="./"><img src="img/icone-128.png" alt="">Assistente do Separador</a>
     <span class="sp"></span>
     <a class="link" href="./">Início</a>
-    <a class="btn pri peq" href="#" data-instalar>Instalar grátis</a>
+    <a class="btn pri peq" href="https://chromewebstore.google.com/detail/assistente-do-separador/kdofkaahabffamnfbegignnjaklldcpo" target="_blank" rel="noopener">Instalar grátis</a>
   </div>
 </header>
 
@@ -63,7 +63,7 @@
         <h2><span class="n">1</span>Instalar no Chrome</h2>
         <ol>
           <li>No computador onde a loja usa o App Separador, abra o Google Chrome.</li>
-          <li>Entre na <a href="#" data-instalar>página do Assistente na Chrome Web Store</a> e clique em <b>Usar no Chrome</b>, depois em <b>Adicionar extensão</b>.</li>
+          <li>Entre na <a href="https://chromewebstore.google.com/detail/assistente-do-separador/kdofkaahabffamnfbegignnjaklldcpo" target="_blank" rel="noopener">página do Assistente na Chrome Web Store</a> e clique em <b>Usar no Chrome</b>, depois em <b>Adicionar extensão</b>.</li>
           <li>Opcional: clique no ícone de quebra-cabeça, ao lado da barra de endereço, e fixe o Assistente para ver o ícone.</li>
         </ol>
         <p class="dica"><b>Importante:</b> funciona no Chrome do computador. No celular e no tablet a Chrome Web Store não instala extensões.</p>
@@ -172,7 +172,7 @@
 </footer>
 
 <script>
-  const LOJA = 'https://chromewebstore.google.com/detail/kdofkaahabffamnfbegignnjaklldcpo';
+  const LOJA = 'https://chromewebstore.google.com/detail/assistente-do-separador/kdofkaahabffamnfbegignnjaklldcpo';
   document.querySelectorAll('[data-instalar]').forEach((a) => { a.href = LOJA; a.target = '_blank'; a.rel = 'noopener'; });
   fetch('https://assistente-separador.onrender.com/v1/publico').then((r) => r.json()).then((c) => {
     const d = String(c.whatsapp || '').replace(/\D/g, '');
