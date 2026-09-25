@@ -150,7 +150,7 @@
 
 <footer>
   <div class="wrap">
-    <span data-nome>Emvix Comércio de Bebidas</span>
+    <span><span data-nome>Emvix Comércio de Bebidas</span><span data-cnpj></span></span>
     <span><a href="como-usar.html">Como usar</a> · <a href="privacidade.html">Política de privacidade</a> · <a href="#" data-zap>WhatsApp</a></span>
     <span>Sem relação oficial com o iFood.</span>
   </div>
@@ -171,6 +171,8 @@
     const de = document.querySelector('[data-de]'), of = document.querySelector('[data-oferta]');
     if (c.preco_de) { de.innerHTML = ''; de.append('de '); const s = document.createElement('s'); s.textContent = c.preco_de; de.append(s, ' por'); } else de.remove();
     if (c.oferta && c.preco_de) of.textContent = c.oferta; else of.remove();
+    const cnpj = String(c.cnpj || '').replace(/\D/g, '');
+    if (cnpj.length === 14) document.querySelectorAll('[data-cnpj]').forEach((el) => { el.textContent = ' · CNPJ ' + cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, '$1.$2.$3/$4-$5'); });
     if (c.nome) document.querySelectorAll('[data-nome]').forEach((el) => { el.textContent = c.nome; });
   }).catch(() => document.querySelectorAll('[data-zap]').forEach((a) => { a.style.display = 'none'; }));
 </script>
